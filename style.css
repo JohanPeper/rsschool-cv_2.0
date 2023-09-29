@@ -12,7 +12,6 @@ nav {
     padding: 0;
     background-color: #829985;
     overflow: hidden;
-
     text-align: center;
     padding: 16px;
     padding-left: 25%;
@@ -37,6 +36,10 @@ nav a {
 
 nav a:hover {
     background-size: 100% 2px;
+}
+
+.burger, .burgerNav {
+    display: none;
 }
 
 .name {
@@ -65,4 +68,46 @@ nav a:hover {
     margin-bottom: 2%;
     text-align: left;
     background-color: blueviolet;
+}
+
+@media screen and (max-width: 926px) {
+    .collapse {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        float: right;
+    }
+
+    .menu {
+        position: relative;
+       /* background-image: url("./img/burger.png");*/
+        height: 30px;
+        width: 30px;
+        border: none;
+        outline: none;
+        z-index: 9;
+        background-color: #829985;
+    }
+ 
+    .collapse.open {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #829985;
+        z-index: 1;
+        padding-top: 10%;
+        padding-bottom:50% ;
+    }
+
+    nav a {
+        background-image: none;
+    }
 }
