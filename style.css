@@ -19,7 +19,7 @@ header {
 nav,
 .footer-container {
     margin: auto;
-    width: 80%;
+    max-width: 1440px;
     background-color: #829985;
     overflow: hidden;
     text-align: center;
@@ -55,7 +55,7 @@ nav a:hover,
 }
 
 .profile {
-    width: 80%;
+    max-width: 1440px;
     margin: auto;
     height: 300px;
     display: flex;
@@ -82,14 +82,16 @@ nav a:hover,
     color: #829985;
     font-size: 21.5px;
     font-weight: 100;
-
+    line-height: 230%;
+    letter-spacing: 2px;
 }
 
 .name h2 {
     font-size: 32px;
     font-weight: 100;
     color: #5c5c5c;
-    line-height: 50%;
+    line-height: 120%;
+    letter-spacing: 10px;
 }
 
 .line {
@@ -100,7 +102,7 @@ nav a:hover,
 }
 
 .content {
-    width: 80%;
+    max-width: 1440px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -113,8 +115,8 @@ nav a:hover,
 #SUMMARY,
 #CODE,
 #EDUCATION {
+    font-family: Arial, Helvetica, sans-serif;
     width: 49%;
-    height: 300px;
     margin-bottom: 2%;
     text-align: left;
     padding: 10px;
@@ -123,6 +125,11 @@ nav a:hover,
     font-weight: 400;
     line-height: 1.5;
     color: #4d2323;
+}
+
+#PROJECTS,
+#EDUCATION {
+    border-bottom: none;
 }
 
 #CONTACTS h2,
@@ -134,6 +141,12 @@ nav a:hover,
     font-size: 20px;
     font-weight: 400;
     color: #829985;
+    letter-spacing: 3px;
+}
+
+code {
+    word-break: break-all;
+    overflow: hidden;
 }
 
 ul {
@@ -228,12 +241,19 @@ footer {
     justify-content: space-between;
 }
 
-.rss a,.rss{
+.rss a,
+.rss {
     width: 121px;
     height: 45px;
     background-image: url("./img/rss.svg");
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width:1445px) {
+    main {
+        padding: 0 20px;
+    }
 }
 
 @media screen and (max-width: 926px) {
@@ -275,5 +295,54 @@ footer {
 
     nav a {
         background-image: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile{
+        flex-direction: column;
+        height: 490px;
+        justify-content: space-around;
+        padding: 50px 30px 35px;
+    }
+    .photo img {
+        height: 200px;
+        width: 200px;
+        border-radius: 150px;
+        margin: 0;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+        filter: grayscale(0.2) brightness(1.05);
+    }
+    .photo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .line{
+        width: 50%;
+    }
+
+    #CONTACTS,
+    #SKILLS,
+    #PROJECTS,
+    #SUMMARY,
+    #CODE,
+    #EDUCATION {
+        width: 98%;
+    }
+    #PROJECTS{
+        border-bottom: 1px solid #672f2f;
+    }
+}
+@media screen and (max-width: 410px) {
+    .name h2{
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+    .name{
+        line-height: 210%;
+    }
+    .name p{
+        margin-top: 19px;
     }
 }
