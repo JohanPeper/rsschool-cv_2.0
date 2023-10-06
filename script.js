@@ -16,6 +16,7 @@ navBtn.onclick = () => {
     burgerNavLinks.forEach((e) => {
         e.addEventListener("click", () => {
             burgerNav.classList.remove("open");
+            navBtnImg.src = "./img/burger.png";
         });
     });
 })();
