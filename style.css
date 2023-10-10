@@ -176,7 +176,7 @@ li::before {
     position: relative;
     display: inline-block;
     right: 10px;
-    top: 5px;
+    top: 1px;
     width: 14px;
     height: 14px;
     background-size: 14px 14px;
